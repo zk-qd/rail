@@ -1,0 +1,327 @@
+
+
+
+#railWin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000022;
+    z-index: 999;
+    display: none;
+}
+
+#railWin>.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: 90vh;
+    background: white;
+}
+
+#railWin .info span {
+    color: #333333;
+    font-size: 15px;
+}
+
+#railWin .info {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#railWin .info em {
+    display: inline-block;
+    font-size: 15px;
+}
+
+#railWin>.content>.headContent {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    color: #000000;
+    font-weight: 500;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+#railWin>.content>.headContent>.title {
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#railWin>.content>.headContent>.exit {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #00000055;
+    transition: all 600;
+}
+
+#railWin>.content>.headContent>.exit:hover {
+    color: #000000;
+    font-size: 22px;
+}
+
+#railWin>.content>.bodyContent {
+    height: calc(100% - 105px);
+    width: 100%;
+}
+
+#railMap {
+    width: 100%;
+    height: 100%;
+}
+
+#railWin .info>ul {
+    /* width: 100%; */
+    height: 50px;
+    line-height: 50px;
+}
+
+#railWin .info li {
+    color: white;
+    height: 100%;
+    /* width: 25%; */
+    float: left;
+}
+
+#railWin .info .rail-button {
+    padding-right: 5%;
+    float: right;
+}
+
+#railWin .info em {
+    color: goldenrod;
+}
+
+#railWin .info em.greater {
+    width: 30px;
+    text-align: center;
+}
+
+#railWin .info input {
+    border: 1px solid #333;
+    background: #FFFFFF;
+    padding-left: 8px;
+    width: 200px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+
+/* 提示 */
+
+#railWin #hint {
+    position: fixed;
+    top: 20%;
+    right: 2%;
+    background-color: #00000022;
+    height: 30px;
+    line-height: 30px;
+    color: red;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+
+/* 编辑 */
+#railWin #btn-save,
+#railWin #btn-reset {
+    background: #009688;
+    color: #FFFFFF;
+    padding: 0px 8px;
+    height: 30px;
+    vertical-align: middle;
+    width: 80px;
+    font-size: 14px;
+    transition: all 600ms;
+}
+
+#railWin #btn-save:hover,
+#railWin #btn-reset:hover {
+    font-size: 16px;
+}
+
+#railWin #btn-reset {
+    margin-left: 3px;
+}
+
+#railWin #edit {
+    flex-grow: 1;
+    color: white;
+    font-size: 16px;
+    display: none;
+    right: 2%;
+    position: fixed;
+    bottom: 5%;
+}
+
+#railWin #edit>li {
+    float: left;
+}
+
+#railWin #edit button {
+    height: 40px;
+    padding: 0 10px;
+    background: #1974f4;
+    border-radius: 3x;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    width: 100px;
+    margin-left: 30px;
+    transition: all 600ms;
+}
+
+#railWin #edit button:hover {
+    font-size: 18px;
+}
+/* @media only screen and (min-width: 1000px) and (max-width: 1920px) {
+	#railWin .info em{
+		width: 50%;
+		font-size: 14px!important;
+	}
+	#railWin .info input{
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+	}
+	#railWin #hint{
+		top: 25%;
+	}
+	#railWin .info span{
+		font-size: 14px;
+	}
+	#railWin .info{
+		margin: 10px 0px;
+	}
+	#railWin #btn-save, #railWin #btn-reset{
+		height: 30px;
+		line-height: 30px;
+	}
+	#railWin>.content>.headContent{
+		height: 50px;
+		line-height: 50px;
+	}
+	#railWin>.content>.headContent>.title{
+		font-size: 22px;
+	}
+	#railWin #edit button{
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+	}
+}
+ */
+
+
+ @-webkit-keyframes zoomOutUp {
+    40% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+@keyframes zoomOutUp {
+    40% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    to {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+        -webkit-transform-origin: center bottom;
+        transform-origin: center bottom;
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+.zoomOutUp {
+    -webkit-animation-name: zoomOutUp;
+    animation-name: zoomOutUp;
+}
+
+
+
+@-webkit-keyframes zoomInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+@keyframes zoomInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+.zoomInUp {
+    -webkit-animation-name: zoomInUp;
+    /* animation-name: zoomInUp; */
+    animation: 600ms zoomInUp;
+}
+
+ 
+
+
+/* 清除默认样式 */
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+button {
+    border: none;
+}
+em {
+    font-style:normal;
+}

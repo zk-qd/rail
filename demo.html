@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/rail.css">
+</head>
+
+<body>
+    <button onclick='add()'>添加</button><br />
+    <button onclick='edit()'>编辑</button><br />
+    <button onclick='check()'>查看</button><br />
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src="./Animation.js"></script> -->
+<script src="./js/rail.js"></script>
+<script src="./js/tip.js"></script>
+<script src="http://webapi.amap.com/maps?v=1.4.14&key=a1aba2049ce8ef3ed0dd419dd839b4bb&plugin=AMap.LineSearch"></script>
+
+<script>
+    var path = [[112.954848, 28.212505], [113.028662, 28.220522], [112.998793, 28.173622]];
+
+    function add() {
+        railWin.initAdd({
+            title: '添加',
+            success: function (data) {
+                
+            },
+        });
+    }
+    function edit() {
+        railWin.initEdit({
+            title: '编辑',
+            success: function (data) {
+                
+            },
+            path: path,
+            areaName: '长沙',
+        });
+    }
+    function check() {
+
+        railWin.initCheck({
+            title: '查看',
+            path: path,
+            areaName: '长沙',
+        });
+    }
+
+</script>
